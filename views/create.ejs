@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Bootstrap CSS -->
+    <%- include('partials/bootstrap') %>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= title %></h1>
+      <form action="/create" method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="hp" class="form-label">HP</label>
+          <input
+            type="number"
+            class="form-control"
+            id="hp"
+            name="hp"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="attack" class="form-label">Attack</label>
+          <input
+            type="number"
+            class="form-control"
+            id="attack"
+            name="attack"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="defense" class="form-label">Defense</label>
+          <input
+            type="number"
+            class="form-control"
+            id="defense"
+            name="defense"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="speed" class="form-label">Speed</label>
+          <input
+            type="number"
+            class="form-control"
+            id="speed"
+            name="speed"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input
+            type="text"
+            class="form-control"
+            id="image"
+            name="image"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-info">Create Pokemon</button>
+      </form>
+      <footer>
+        <p>Copyright © 2023</p>
+      </footer>
+    </div>
+  </body>
+</html>
