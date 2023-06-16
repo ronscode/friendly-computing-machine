@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Bootstrap CSS -->
+    <%- include('partials/bootstrap') %>
+    <title><%= pokemon.name %></title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1><%= pokemon.name %></h1>
+      <h2>Stats</h2>
+      <p>HP: <%= pokemon.stats.hp %></p>
+      <p>Attack: <%= pokemon.stats.attack %></p>
+      <p>Defense: <%= pokemon.stats.defense %></p>
+      <p>Speed: <%= pokemon.stats.speed %></p>
+      <img src="<%= pokemon.image %>" alt="" />
+    </div>
+    <footer>
+      <p>Copyright © 2023</p>
+    </footer>
+  </body>
+</html>

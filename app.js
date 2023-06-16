@@ -22,6 +22,50 @@ app.get('/pokemon', (req, res) => {
   res.render('pokemon', {title: "Pokemon", pokemonArray});
 });
 
+// GET single Pokemon
+
+app.get('/pokemon/:id', (req, res) => {
+  const id = req.params.id;
+  const pokemon = pokemonArray[id];
+  console.log(pokemon);
+  res.render('singlePokemon', {pokemon});
+});
+
+// GET random Pokemon
+
+app.get('/random', (req, res) => {
+  // generate random number between 0 - 9
+  const rn = Math.floor(Math.random() * 10);
+  const pokemon = pokemonArray[rn];
+  console.log(pokemon)
+  res.render("singlePokemon", {pokemon})
+});
+// create route /pokemon/random
+// get a random Pokemon 0-10
+// render singlePokemon, pass in the matching Pokemon
+// from the random index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Create a route that...
+// GET a single Pokemon by ID
+
+// Use the index of the array as the id
+// Hint, you'll use req.params
+// Create a template and pass in the Pokemon at that index
+
 // Create GET Route
 app.get('/create', (req, res) => {
   res.render('create', {title: "Create A Pokemon"});
@@ -36,11 +80,7 @@ app.post('/create', (req, res) => {
   res.redirect('/pokemon');
 });
 
-// Create a route that...
-// GET a single Pokemon by ID
-// Use the index of the array as the id
-// Hint, you'll use req.params
-// Create a template and pass in the Pokemon at that index
+
 
 
 
